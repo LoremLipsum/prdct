@@ -1,5 +1,9 @@
 .UsefulProducts {
   padding-top: 20px;
+
+  .SectionHeader {
+    margin-bottom: 10px;
+  }
 }
 
 .UsefulProducts-Inner {
@@ -28,6 +32,10 @@
   .UsefulProducts {
     padding-top: 30px;
     padding-bottom: 60px;
+
+    .SectionHeader {
+      margin-bottom: 16px;
+    }
   }
 
   .UsefulProducts-Inner {

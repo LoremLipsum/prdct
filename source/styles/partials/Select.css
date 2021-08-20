@@ -24,7 +24,7 @@
     display: block;
     width: 32px;
     height: 32px;
-    border-left: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-dark);
     border-radius: 0 3px 3px 0;
     background-color: var(--light-btn);
     background-image: var(--arrow-select);
@@ -46,7 +46,7 @@
   display: block;
   width: 100%;
   padding: 6px 50px 6px 16px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-dark);
   border-radius: 3px;
   background-color: var(--transparent);
   font-size: 15px;

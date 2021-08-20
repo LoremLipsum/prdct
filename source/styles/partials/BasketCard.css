@@ -70,7 +70,7 @@
   &::after {
     content: "|";
     margin-left: 5px;
-    color: var(--border-color);
+    color: var(--border-dark);
   }
 
   &_remove {

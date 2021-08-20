@@ -1,5 +1,9 @@
 .Basket {
   padding-top: 20px;
+
+  .SectionHeader {
+    margin-bottom: 10px;
+  }
 }
 
 .Basket-Inner {
@@ -28,6 +32,10 @@
 @media screen and (--tablet) {
   .Basket {
     padding-top: 36px;
+
+    .SectionHeader {
+      margin-bottom: 16px;
+    }
   }
 
   .Basket-Inner {

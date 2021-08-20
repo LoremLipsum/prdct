@@ -18,8 +18,8 @@
   height: 34px;
   padding: 6px 10px;
   border: none;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
   font-size: 15px;
   line-height: 20px;
   font-weight: 600;
@@ -35,7 +35,7 @@
   width: 34px;
   height: 34px;
   padding: 6px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-dark);
   background-color: var(--light-btn);
   text-align: center;
   transition-duration: 0.2s;
