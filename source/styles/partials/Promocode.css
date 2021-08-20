@@ -14,6 +14,10 @@
   display: inline-block;
 }
 
+.Promocode-Label {
+  margin-right: 8px;
+}
+
 .Promocode-TextField {
   display: none;
   margin-top: 10px;

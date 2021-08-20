@@ -17,7 +17,10 @@
   --light-btn-hover: hsl(0,0%,87%);
   --base-font: hsl(197,9%,13%); /* #202527 */
   --base-font-hover: hsla(197,9%,13%,0.5);
-  --light-font: hsl(210, 2%, 34%); /* #94999E */
+  --light-font-h: 210;
+  --light-font-s: 2%;
+  --light-font-l: 34%;
+  --light-font: hsl(var(--light-font-h),var(--light-font-s),var(--light-font-l)); /* #94999E */
   --border-color: hsl(220, 7%, 92%); /* #E9EAEC */
   --border-dark: hsl(0, 0%, 82%); /* #D1D1D1 */
   --transparent: hsla(0,0%,100%,0);
