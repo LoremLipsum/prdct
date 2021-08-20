@@ -1,0 +1,66 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  background-color: var(--white);
+  font-family: var(--main-font-family);
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--base-font);
+  text-size-adjust: 100%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+b {
+  font-weight: 700;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: var(--action);
+  text-decoration: none;
+  transition-duration: 0.2s;
+  transition-property: color;
+
+  &:hover {
+    color: var(--action-hover);
+  }
+}
+
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+table {
+  border-collaps: collaps;
+  border-spacing: 0;
+}
+
+@media screen and (--desktop) {
+  body {
+    font-size: 14px;
+  }
+}

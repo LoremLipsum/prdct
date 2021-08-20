@@ -1,0 +1,34 @@
+.Btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--action);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  transition-property: background-color, color;
+
+  &:hover {
+    background-color: var(--action-hover);
+  }
+
+  &:active {
+    color: hsla(var(--white-h),var(--white-s),var(--white-l),0.5);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: var(--disabled);
+    pointer-events: none;
+  }
+
+  &_large {
+    padding: 15px 30px;
+  }
+}

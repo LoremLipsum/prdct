@@ -1,0 +1,54 @@
+.UsefulProducts {
+  padding-top: 20px;
+}
+
+.UsefulProducts-Inner {
+  width: 100vw;
+  padding: 24px 16px 30px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.UsefulProducts-List {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+.UsefulProducts-Item {
+  width: 142px;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (--tablet) {
+  .UsefulProducts {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .UsefulProducts-Inner {
+    max-width: var(--desktop);
+    margin: 0 auto;
+    padding: 0 var(--pads);
+    background-color: var(--transparent);
+  }
+
+  .UsefulProducts-Inner {
+    max-width: var(--desktop);
+    margin: 0 auto;
+    padding: 0 var(--pads);
+  }
+
+  .UsefulProducts-List {
+    padding-bottom: 20px;
+  }
+
+  .UsefulProducts-Item {
+    width: 186px;
+    margin-right: 20px;
+  }
+}

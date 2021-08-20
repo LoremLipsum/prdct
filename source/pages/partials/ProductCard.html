@@ -1,0 +1,14 @@
+{% macro ProductCard(mixClass, title, href, image, currentPrice) %}
+<article class="ProductCard {{ mixClass }}">
+  <a href="{{ href }}" class="ProductCard-ImageHolder">
+    <img src="{{ image }}" alt="Фото товара">
+  </a>
+  <div class="ProductCard-Content">
+    <h3 class="ProductCard-Title">
+      <a href="">{{ title }}</a>
+    </h3>
+    <div class="ProductCard-Price">{{ currentPrice }} <span class="Rouble">₽</span></div>
+    <button class="ProductCard-Btn Btn">В корзину</button>
+  </div>
+</article>
+{% endmacro %}

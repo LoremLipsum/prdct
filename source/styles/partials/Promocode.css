@@ -1,0 +1,21 @@
+.Promocode {
+  width: 100%;
+}
+
+.Promocode-Title {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.Promocode-Label,
+.Promocode-Tooltip {
+  display: inline-block;
+}
+
+.Promocode-TextField {
+  display: none;
+  margin-top: 10px;
+}
+

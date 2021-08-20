@@ -1,0 +1,82 @@
+.Tooltip {
+  position: relative;
+
+  &_question {
+    .Tooltip-Title {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--light-font);
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
+}
+
+.Tooltip-Title {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: var(--light-font);
+  user-select: none;
+
+  &:hover {
+    ~ .Tooltip-Panel {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.Tooltip-Panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  width: 200px;
+  padding: 7px 10px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--white);
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--dark-font);
+  text-align: left;
+  box-shadow: 0 1px 2px 0 hsla(0,0%,0%,0.2);
+  opacity: 0;
+  visibility: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    top: -6px;
+    left: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    background-color: var(--white);
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    top: -10px;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 10px;
+  }
+
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+}

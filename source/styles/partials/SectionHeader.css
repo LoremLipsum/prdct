@@ -1,0 +1,45 @@
+.SectionHeader {
+  margin-bottom: 16px;
+}
+
+.SectionHeader-Inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  max-width: var(--tablet);
+  margin: 0 auto;
+  padding: 0 var(--pads);
+}
+
+.SectionHeader-Title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--base-font);
+}
+
+.SectionHeader-Info {
+  margin-left: 15px;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  color: var(--light-font);
+}
+
+@media screen and (--tablet) {
+  .SectionHeader {
+    margin-bottom: 26px;
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .SectionHeader-Inner {
+    max-width: var(--desktop);
+  }
+
+  .SectionHeader-Info {
+    font-size: 14px;
+  }
+}
+

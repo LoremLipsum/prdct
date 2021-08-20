@@ -1,0 +1,12 @@
+.Link {
+  padding: 0;
+  border: none;
+  background-color: var(--transparent);
+  color: var(--action);
+  transition-duration: 0.2s;
+  transition-property: color;
+
+  &:hover {
+    color: var(--action-hover);
+  }
+}

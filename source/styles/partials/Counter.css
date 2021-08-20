@@ -1,0 +1,103 @@
+.Counter {
+  position: relative;
+  display: block;
+  width: 114px;
+  padding-bottom: 34px;
+}
+
+.Counter-Field {
+  display: block;
+}
+
+.Counter-Input {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 34px;
+  width: 46px;
+  height: 34px;
+  padding: 6px 10px;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--base-font);
+  text-align: center;
+}
+
+.Counter-Btn {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: 34px;
+  height: 34px;
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-btn);
+  text-align: center;
+  transition-duration: 0.2s;
+  transition-property: background;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition-duration: 0.2s;
+    transition-property: opacity;
+  }
+
+  &:hover {
+    background-color: var(--light-btn-hover);
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &:disabled,
+  &.is-disabled {
+    pointer-events: none;
+
+    &::before {
+      opacity: 0.5
+    }
+  }
+
+  &_up {
+    left: 1px;
+    border-radius: 3px 0 0 3px;
+
+    &::before {
+      background-image: var(--plus);
+    }
+  }
+
+  &_down {
+    right: 1px;
+    border-radius: 0 3px 3px 0;
+
+    &::before {
+      background-image: var(--minus);
+    }
+  }
+}
+
+.Conter-BtnText {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--base-font);
+  text-align: center;
+}

@@ -1,0 +1,85 @@
+.Order {
+  padding: 16px;
+  background-color: var(--white);
+}
+
+.Order-Table {
+  width: 100%;
+}
+
+.Order-Row {
+  &_promocode {
+    .Order-Cell {
+      padding-bottom: 12px;
+    }
+  }
+
+  &_total {
+    .Order-Cell {
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+      font-size: 18px;
+
+      &:last-child {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.Order-Cell {
+  padding: 6px 16px;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 600;
+  color: var(--base-font);
+  text-align: right;
+
+  &:first-child {
+    text-align: left;
+  }
+}
+
+.Order-Quantity {
+  color: var(--light-font);
+}
+
+.Order-Discount {
+  color: var(--special);
+}
+
+.Order-totalPrice {
+  font-weight: 700;
+}
+
+.Order-Submit {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Order-Footnote {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 17px;
+  color: var(--light-font);
+}
+
+@media screen and (--tablet) {
+  .Order {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .Order-Card {
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    background-color: var(--white);
+  }
+
+  .Order-Footnote {
+    padding: 0 16px;
+  }
+}

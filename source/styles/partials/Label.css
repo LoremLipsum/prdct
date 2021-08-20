@@ -1,0 +1,13 @@
+.Label {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 400;
+  color: var(--light-font);
+  text-transform: uppercase;
+}
+
+.Label-Text {
+  display: inline-block;
+}

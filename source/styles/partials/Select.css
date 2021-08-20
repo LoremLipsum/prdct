@@ -1,0 +1,60 @@
+.Select {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 90px;
+
+  &_size {
+    .Select-Input {
+      text-align: center;
+    }
+  }
+}
+
+.Select-Holder {
+  position: relative;
+  display: block;
+  background-color: var(--white);
+  border-radius: 3px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-left: 1px solid var(--border-color);
+    border-radius: 0 3px 3px 0;
+    background-color: var(--light-btn);
+    background-image: var(--arrow-select);
+    background-repeat: no-repeat;
+    background-size: 10px 6px;
+    background-position: center;
+  }
+
+  &:hover {
+    &::after {
+      background-color: var(--light-btn-hover);
+    }
+  }
+}
+
+.Select-Input {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding: 6px 50px 6px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background-color: var(--transparent);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--base-font);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}

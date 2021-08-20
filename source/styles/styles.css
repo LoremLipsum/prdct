@@ -1,0 +1,28 @@
+
+@import "../../node_modules/glider-js/glider.css";
+@import "global/fonts";
+@import "global/vars";
+@import "global/base";
+@import "partials/Page";
+@import "partials/VisuallyHidden";
+@import "partials/Rouble";
+@import "partials/Btn";
+@import "partials/Link";
+@import "partials/CloseBtn";
+@import "partials/Title";
+@import "partials/Label";
+@import "partials/TextField";
+@import "partials/Select";
+@import "partials/Counter";
+@import "partials/Tooltip";
+@import "partials/Price";
+@import "partials/SectionHeader";
+@import "partials/PageHeader";
+@import "partials/PageFooter";
+@import "partials/BasketCard";
+@import "partials/Basket";
+@import "partials/Promocode";
+@import "partials/Order";
+@import "partials/ProductCard";
+@import "partials/UsefulProducts";
+

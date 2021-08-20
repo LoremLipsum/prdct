@@ -1,0 +1,67 @@
+.Price-Item {
+  display: inline-block;
+  vartical-align: baseline;
+  margin-right: 5px;
+  font-weight: 600;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &_current {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--base-font);
+  }
+
+  &_past {
+    font-size: 14px;
+    line-height: 1;
+    color: var(--disabled);
+    text-decoration-color: var(--special);
+  }
+
+  &_discount {
+    font-size: 14px;
+    line-height: 1;
+    color: var(--special);
+  }
+}
+
+.Price-Info {
+  display: inline-block;
+}
+
+@media screen and (--tablet) {
+  .Price-Item {
+    display: inline-block;
+    vartical-align: baseline;
+    margin-right: 5px;
+    font-weight: 600;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_current {
+      display: block;
+      margin-right: 0;
+      font-weight: 700;
+      text-align: center
+    }
+
+    &_past {
+      font-size: 16px;
+    }
+  }
+
+  .Price-Info {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+@media screen and (--desktop) {
+
+}

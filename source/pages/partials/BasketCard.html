@@ -1,0 +1,75 @@
+{% macro BasketCard(mixClass, title, href, image, currentPrice, pastPrice, discount, isActive) %}
+<fieldset class="{{ mixClass }} BasketCard">
+  <a class="BasketCard-ImageHolder" href="{{ href }}">
+    <img src="{{ image }}" alt="">
+  </a>
+  <div class="BasketCard-Main">
+    <legend class="BasketCard-Title">
+      <a href="{{ href }}">{{ title }}</a>
+    </legend>
+    <div class="BasketCard-Content">
+      <div class="BasketCard-Col BasketCard-Col_left">
+        <label class="BasketCard-Size Select Select_size">
+          <span class="Label">Размер</span>
+          <span class="Select-Holder">
+            <select class="Select-Input" name="size">
+              <option value="S" selected>S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+          </span>
+        </label>
+        <div class="BasketCard-Counter">
+          <div class="Counter j-counter">
+            <button class="Counter-Btn Counter-Btn_up j-counter-up" type="button">
+              <span class="VisuallyHidden" aria-hidden="true">+</span>
+              <span class="VisuallyHidden" hidden="true">Увеличить количество товара на единицу</span>
+            </button>
+            <label class="Counter-Field">
+              <span class="Label"><span class="Label-Text" hidden="true" aria-hidden="true">Кол-во</span><span class="VisuallyHidden">Количество</span></span>
+              <input class="Counter-Input j-counter-input" type="text" name="quantity" value="1" step='1' min='0' max='100' data-count='1' readonly>
+            </label>
+            <button class="Counter-Btn Counter-Btn_down j-counter-down" type="button">
+              <span class="VisuallyHidden" aria-hidden="true">-</span>
+              <span class="VisuallyHidden" hidden="true">Уменьшить количество товара на единицу</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="BasketCard-Col BasketCard-Col_right">
+        <div class="BasketCard-Price Price">
+          <div class="Price-Item Price-Item_current">
+            {{ currentPrice }} <span class="Rouble">₽</span>
+          </div>
+          {% if pastPrice or discount %}
+            <div class="Price-Info">
+              {% if pastPrice %}
+                <del class="Price-Item Price-Item_past">{{ pastPrice }} <span class="Rouble">₽</span></del>
+              {% endif %}
+              {% if discount %}
+                <span class="Price-Item Price-Item_discount">{{ discount }}%</span>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+        <span class="BasketCard-ControlItem BasketCard-ControlItem_favirite {{ isActive }}">
+          <a class="BasketCard-ControlLink" href="">
+            <svg class="BasketCard-ControlIcon">
+              <use href="#heart"></use>
+            </svg>
+            <span>В избранное</span>
+          </a>
+        </span>
+        <span class="BasketCard-ControlItem BasketCard-ControlItem_remove">
+          <a class="BasketCard-ControlLink" href="">
+            <svg class="BasketCard-ControlIcon">
+              <use href="#crose"></use>
+            </svg>
+            <span>Удалить</span>
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</fieldset>
+{% endmacro %}

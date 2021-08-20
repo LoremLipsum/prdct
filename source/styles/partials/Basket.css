@@ -1,0 +1,72 @@
+.Basket {
+  padding-top: 20px;
+}
+
+.Basket-Inner {
+  max-width: var(--tablet);
+  margin: 0 auto;
+}
+
+.Basket-ListCard {
+  min-height: 248px;
+  margin-bottom: 16px;
+  padding: 24px 16px;
+  background-color: var(--white);
+}
+
+.Basket-Card {
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+@media screen and (--tablet) {
+  .Basket {
+    padding-top: 36px;
+  }
+
+  .Basket-Inner {
+    max-width: var(--desktop);
+    padding: 0 var(--pads);
+  }
+
+  .Basket-ListCard {
+    margin-bottom: 16px;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+  }
+
+  .Basket-Card {
+    padding: 16px;
+
+    &:first-of-type {
+      padding-top: 16px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 16px;
+    }
+  }
+
+  .Basket-Order {
+    width: 330px;
+  }
+}
+
+@media screen and (--desktop) {
+  .Basket-Holder {
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    column-gap: 20px;
+  }
+
+  .Basket-ListCard {
+    margin-bottom: 0;
+  }
+}

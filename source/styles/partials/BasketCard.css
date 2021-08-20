@@ -1,0 +1,244 @@
+.BasketCard {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  column-gap: 16px;
+  margin: 0;
+  padding: 20px 0;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.BasketCard-ImageHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.BasketCard-Title {
+  display: block;
+  margin-top: -3px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  color: var(--base-font);
+
+  a {
+    color: var(--base-font);
+
+    &:hover {
+      color: var(--base-font-hover);
+    }
+  }
+}
+
+.BasketCard-Col {
+  &_right {
+    margin-top: 16px;
+  }
+}
+
+.BasketCard-Size {
+  display: none;
+}
+
+.BasketCard-Counter {
+  .Label {
+    transform: scale(0, 0);
+    position: absolute;
+  }
+}
+
+.BasketCard-Price {
+  margin-bottom: 10px;
+}
+
+.BasketCard-ControlItem {
+  margin-right: 5px;
+
+  &::after {
+    content: "|";
+    margin-left: 5px;
+    color: var(--border-color);
+  }
+
+  &_remove {
+    margin-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    .BasketCard-ControlLink {
+      color: var(--special);
+    }
+  }
+}
+
+.BasketCard-ControlLink {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--action);
+  transition-duration: 0.2s;
+  transition-property: color;
+
+  &:hover {
+    color: var(--action-hover);
+  }
+
+  &:active {
+    color: var(--special);
+  }
+}
+
+.BasketCard-ControlIcon {
+  display: none;
+}
+
+@media screen and (--tablet) {
+  .BasketCard-Title {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .BasketCard-Content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .BasketCard-Col {
+    width: calc(50% - 40px);
+    max-width: 345px;
+
+    &_left {
+      display: flex;
+      margin-right: right;
+    }
+
+    &_right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 75px;
+      margin-top: 0;
+      margin-left: 80px;
+    }
+  }
+
+  .BasketCard-Size {
+    display: block;
+    margin-right: auto;
+  }
+
+  .BasketCard-Counter {
+    margin-left: 20px;
+
+    .Label {
+      transform: scale(1, 1);
+      position: static;
+    }
+  }
+
+  .BasketCard-Price {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .BasketCard-ControlItem {
+    margin-right: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    &::after {
+      display: none;
+    }
+
+    > {
+      span {
+        transform: scale(0, 0);
+        position: absolute;
+      }
+    }
+
+    &_favirite {
+      order: 1;
+      margin-right: 20px;
+
+      .BasketCard-ControlIcon {
+        width: 24px;
+        height: 23px;
+        stroke: var(--light-font);
+        stroke-width: 2px;
+        fill: none;
+      }
+
+      .BasketCard-ControlLink {
+        stroke: var(--light-font);
+      }
+
+      &.is-active {
+        .BasketCard-ControlIcon {
+          stroke: var(--special);
+          fill: var(--special);
+        }
+      }
+    }
+
+    &_remove {
+      order: 3;
+      margin-left: 20px;
+      margin-right: 15px;
+
+      .BasketCard-ControlIcon {
+        width: 17px;
+        height: 17px;
+        fill: var(--light-font);
+      }
+    }
+  }
+
+  .BasketCard-ControlLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+
+    span {
+      transform: scale(0, 0);
+      position: absolute;
+    }
+
+    &:hover {
+      .BasketCard-ControlIcon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .BasketCard-ControlIcon {
+    display: block;
+    opacity: 0.6;
+    transition-duration: 0.2s;
+    transition-property: opacity;
+  }
+}
