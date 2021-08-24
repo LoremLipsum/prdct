@@ -68,7 +68,7 @@
 }
 
 @media screen and (--desktop) {
-  .Basket-Holder {
+  .Basket-Inner {
     display: grid;
     grid-template-columns: 1fr 330px;
     column-gap: 20px;
