@@ -1,5 +1,5 @@
-{% macro BasketCard(mixClass, title, href, image, currentPrice, pastPrice, discount, isActive) %}
-<fieldset class="{{ mixClass }} BasketCard" form="#basket">
+{% macro BasketCard(mixClass, title, href, image, currentPrice, pastPrice, discount, isActive, index) %}
+<fieldset class="{{ mixClass }} BasketCard" form="basket">
   <a class="BasketCard-ImageHolder" href="{{ href }}">
     <img src="{{ image }}" alt="">
   </a>
@@ -12,7 +12,7 @@
         <label class="BasketCard-Size Select Select_size">
           <span class="Label">Размер</span>
           <span class="Select-Holder">
-            <select class="Select-Input" name="size">
+            <select class="Select-Input" name="size{{ index }}" form="basket">
               <option value="S" selected>S</option>
               <option value="M">M</option>
               <option value="L">L</option>
@@ -27,7 +27,7 @@
             </button>
             <label class="Counter-Field">
               <span class="Label"><span class="Label-Text" hidden="true" aria-hidden="true">Кол-во</span><span class="VisuallyHidden">Количество</span></span>
-              <input class="Counter-Input j-counter-input" type="text" name="quantity" value="1" step='1' min='0' max='100' data-count='1' readonly>
+              <input class="Counter-Input j-counter-input" form="basket"type="text" name="quantity{{ index }}" value="1" step='1' min='0' max='100' data-count='1' readonly>
             </label>
             <button class="Counter-Btn Counter-Btn_down j-counter-down" type="button">
               <span class="VisuallyHidden" aria-hidden="true">-</span>

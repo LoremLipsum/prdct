@@ -11,8 +11,7 @@
   margin: 0 auto;
 }
 
-.Basket-ListCard {
-  min-height: 248px;
+.Basket-ListCards {
   margin-bottom: 16px;
   padding: 24px 16px;
   background-color: var(--white);
@@ -43,7 +42,7 @@
     padding: 0 var(--pads);
   }
 
-  .Basket-ListCard {
+  .Basket-ListCards {
     margin-bottom: 16px;
     padding: 0;
     border: 1px solid var(--border-color);
@@ -74,7 +73,7 @@
     column-gap: 20px;
   }
 
-  .Basket-ListCard {
+  .Basket-ListCards {
     margin-bottom: 0;
   }
 }

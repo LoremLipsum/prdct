@@ -79,16 +79,16 @@
               <symbol id="crose" viewBox="0 0 17 17"><path d="M0 15.607L15.607 0 17 1.394 1.394 17.001z"/><path d="M15.606 17L0 1.393 1.393 0 17 15.606z"/></symbol>
             </svg>
           </div>
-          <div class="Basket-ListCard">
+          <div class="Basket-ListCards">
             {% for item in basketCardList %}
-              {{ BasketCard('Basket-Card', item.title, item.href, item.image, item.currentPrice, item.pastPrice, item.discount, item.isActive) }}
+              {{ BasketCard('Basket-Card', item.title, item.href, item.image, item.currentPrice, item.pastPrice, item.discount, item.isActive, loop.index) }}
             {% endfor %}
           </div>
         </section>
         <section class="Basket-Order Order">
           <h2 class="VisuallyHidden">Ваш заказ</h2>
           <div class="Order-Card">
-            <form id="basket" action="/">
+            <form id="basket" action="https://echo.htmlacademy.ru" method="POST">
               <table class="Order-Table">
                 <tr class="Order-Row">
                   <th class="Order-Cell" scope="row">Товары <span class="Order-Quantity">(3)</span></th>
