@@ -1,5 +1,5 @@
 {% macro BasketCard(mixClass, title, href, image, currentPrice, pastPrice, discount, isActive) %}
-<fieldset class="{{ mixClass }} BasketCard">
+<fieldset class="{{ mixClass }} BasketCard" form="#basket">
   <a class="BasketCard-ImageHolder" href="{{ href }}">
     <img src="{{ image }}" alt="">
   </a>

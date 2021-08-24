@@ -71,24 +71,24 @@
     </div>
     <div class="Basket-Main">
       <div class="Basket-Inner">
-        <form class="Basket-Holder" action="/">
-          <section class="Basket-Content">
-            <h2 class="VisuallyHidden">Список ваших товаров</h2>
-            <div style="display:none;">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <symbol id="heart" viewBox="0 0 25 22"><path d="M11.314 3.964l.886 1.691.886-1.691C14.026 2.17 15.798 1 17.9 1c3.002 0 5.513 2.51 5.7 5.727a5.497 5.497 0 01-.674 2.587l-.126.227v.039a8.51 8.51 0 01-.3.42l-.017.022-.015.023c-.135.203-.36.434-.575.648l-.028.028-.026.03c-1.421 1.667-3.97 4.29-6.186 6.519A397.06 397.06 0 0112.3 20.6a441.434 441.434 0 01-3.353-3.331C6.73 15.042 4.182 12.418 2.76 10.75l-.026-.03-.028-.028c-.307-.307-.438-.442-.575-.648l-.015-.023L2.1 10a8.51 8.51 0 01-.3-.42v-.04l-.126-.226A5.496 5.496 0 011 6.7C1 3.522 3.482 1 6.5 1c2.102 0 3.874 1.17 4.814 2.964z"/></symbol>
-                <symbol id="crose" viewBox="0 0 17 17"><path d="M0 15.607L15.607 0 17 1.394 1.394 17.001z"/><path d="M15.606 17L0 1.393 1.393 0 17 15.606z"/></symbol>
-              </svg>
-            </div>
-            <div class="Basket-ListCard">
-              {% for item in basketCardList %}
-                {{ BasketCard('Basket-Card', item.title, item.href, item.image, item.currentPrice, item.pastPrice, item.discount, item.isActive) }}
-              {% endfor %}
-            </div>
-          </section>
-          <section class="Basket-Order Order">
-            <h2 class="VisuallyHidden">Ваш заказ</h2>
-            <div class="Order-Card">
+        <section class="Basket-Content">
+          <h2 class="VisuallyHidden">Список ваших товаров</h2>
+          <div style="display:none;">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <symbol id="heart" viewBox="0 0 25 22"><path d="M11.314 3.964l.886 1.691.886-1.691C14.026 2.17 15.798 1 17.9 1c3.002 0 5.513 2.51 5.7 5.727a5.497 5.497 0 01-.674 2.587l-.126.227v.039a8.51 8.51 0 01-.3.42l-.017.022-.015.023c-.135.203-.36.434-.575.648l-.028.028-.026.03c-1.421 1.667-3.97 4.29-6.186 6.519A397.06 397.06 0 0112.3 20.6a441.434 441.434 0 01-3.353-3.331C6.73 15.042 4.182 12.418 2.76 10.75l-.026-.03-.028-.028c-.307-.307-.438-.442-.575-.648l-.015-.023L2.1 10a8.51 8.51 0 01-.3-.42v-.04l-.126-.226A5.496 5.496 0 011 6.7C1 3.522 3.482 1 6.5 1c2.102 0 3.874 1.17 4.814 2.964z"/></symbol>
+              <symbol id="crose" viewBox="0 0 17 17"><path d="M0 15.607L15.607 0 17 1.394 1.394 17.001z"/><path d="M15.606 17L0 1.393 1.393 0 17 15.606z"/></symbol>
+            </svg>
+          </div>
+          <div class="Basket-ListCard">
+            {% for item in basketCardList %}
+              {{ BasketCard('Basket-Card', item.title, item.href, item.image, item.currentPrice, item.pastPrice, item.discount, item.isActive) }}
+            {% endfor %}
+          </div>
+        </section>
+        <section class="Basket-Order Order">
+          <h2 class="VisuallyHidden">Ваш заказ</h2>
+          <div class="Order-Card">
+            <form id="basket" class="Basket-Holder" action="/">
               <table class="Order-Table">
                 <tr class="Order-Row">
                   <th class="Order-Cell" scope="row">Товары <span class="Order-Quantity">(3)</span></th>
@@ -120,10 +120,10 @@
                 </tr>
               </table>
               <button class="Order-Submit Btn Btn_large" type="submit">Оформить заказ</button>
-            </div>
-            <p class="Order-Footnote">Доступные способы и время доставки можно выбрать при оформлении заказа.</p>
-          </section>
-        </form>
+            </form>
+          </div>
+          <p class="Order-Footnote">Доступные способы и время доставки можно выбрать при оформлении заказа.</p>
+        </section>
       </div>
     </div>
   </section>
