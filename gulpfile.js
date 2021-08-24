@@ -26,7 +26,7 @@ const styles = () => {
       ],
     })))
     .pipe(gulp.dest("build/styles"))
-    .pipe(sync.stream());
+    // .pipe(sync.stream());
 }
 
 exports.styles = styles;
@@ -96,6 +96,8 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
+  sync.watch('./build/**/*.*')
+    .on('change', sync.reload);
   done();
 }
 
@@ -107,10 +109,10 @@ const reload = (done) => {
 }
 
 const watcher = () => {
-  gulp.watch("source/styles/**/*.css", gulp.series(styles));
-  gulp.watch("source/scripts/**/*.js", gulp.series(scripts));
-  gulp.watch("source/images/*.{jpg,png,svg}", gulp.series(copyImages));
-  gulp.watch("source/pages/**/*.html", gulp.series(njk, reload));
+  gulp.watch("source/styles/**/*.css", styles);
+  gulp.watch("source/scripts/**/*.js", scripts);
+  gulp.watch("source/images/*.{jpg,png,svg}", copyImages);
+  gulp.watch("source/pages/**/*.html", njk);
 }
 
 const build = gulp.series(
@@ -140,4 +142,5 @@ exports.default = gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);
